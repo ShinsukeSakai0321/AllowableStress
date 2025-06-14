@@ -30,7 +30,7 @@ help(AStress)
 ```
 # 正規分布
 
- ## $\mu$,$\sigma$ともに既知の場合
+ ## $\mu$, $\sigma$ともに既知の場合
 引張強さの分布が$N(400,30^2)$の正規分布であるとき，P=0.01満足する許容応力$S_a$を決定する。
 ```python
 pas.LowerLimit(mu=400, sigm=30, P=0.01)
@@ -38,7 +38,7 @@ pas.LowerLimit(mu=400, sigm=30, P=0.01)
 ```
 
 ## $\mu$のみが未知の場合
-引張強さの許容応力を決定するために，5本の強度実験を実施した。その結果$\hat{\mu}=400MPa$が得られた。信頼度90%，信頼水準95%を満足するための許容応力$S_a$を求めよ。ただし，過去の経験から強度の標準偏差$\sigma=20MPa$が与えられているものとする。
+引張強さの許容応力を決定するために，5本の強度実験を実施した。その結果 $\hat{\mu}=400MPa$ が得られた。信頼度90%，信頼水準95%を満足するための許容応力$S_a$を求めよ。ただし，過去の経験から強度の標準偏差$\sigma=20MPa$が与えられているものとする。
 ```python
 pas.SetParam(param='n',val=5)
 pas.SetParam(param='mu',val=400)
@@ -47,7 +47,7 @@ pas.Bbasis2()
 #359.6569505975057
 ```
 
-## $\mu$,$\sigma$ともに未知の場合
+## $\mu$, $\sigma$ともに未知の場合
 引張強さの許容応力を決定するために，5本の強度実験を実施した。その結果$\hat{\mu}=400MPa$，$\hat{\sigma}=20MPa$が得られた。信頼度90%，信頼水準95%を満足するための許容応力$\hat{S_a}$を求めよ。
 ```python
 pas.SetParam(param='n',val=5)
@@ -88,7 +88,7 @@ Bbasis=np.exp(pas.Bbasis2())
 print('Absis=',Abasis,':Bbasis=',Bbasis)
 #Absis= 291.2633407447084 :Bbasis= 321.76051705594955
 ```
-## $\mu_L$,$\sigma_L$ともに未知の場合
+## $\mu_L$, $\sigma_L$ともに未知の場合
 ```python
 sigm=slog.std()
 mu=slog.mean()
